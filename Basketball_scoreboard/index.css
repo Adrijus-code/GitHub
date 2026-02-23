@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background-color: #1B244A;
+    color: #EEEEEE;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.team-div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.score-div{
+    display: flex;
+    background-color: #080001;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+.title{
+    font-size: 60px;
+    position: relative;
+    top: 30px;
+}
+#home-score, #guest-score{
+    font-size: 150px;
+    font-family: C;
+}
+.button-div{
+    font-size: 40px;
+    position: relative;
+    top: 35px;
+}
+.addButton{
+    background-color: #1B244A;
+    color: #EEEEEE;
+    border: 2px solid #EEEEEE;
+    border-radius: 5px;
+    padding: 15px;
+}
+.reset-div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+}
+#reset-btn{
+    padding: 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: aqua;
+}
