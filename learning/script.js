@@ -238,3 +238,106 @@ function sumSecondHalf(arr){
 }
 
 console.log(sumSecondHalf(fiveArr))
+
+
+
+
+let numArr = [32, 65, 44, 85, 61] 
+      
+
+function highestNum(arr){
+    let max = arr[0]
+    for (let i = 0; i < arr.length -1 ; i++){
+        if (arr[i] > max){
+            max = arr[i]
+        }
+    }
+    return max;
+}
+
+console.log(highestNum(numArr))
+
+
+function lowestNum(arr){
+    let min = arr[0]
+    for (let i = 0; i < arr.length -1 ; i++){
+        if (arr[i] < min){
+            min = arr[i]
+        }
+    }
+    return min;
+}
+
+console.log(lowestNum(numArr))
+
+
+
+// 50 
+// 3.14 * 50 * 50
+function calculateAreaAndPerimeter(radius){
+    let area = Math.PI * Math.pow(radius, 2);
+    let perimeter = Math.PI * 2 * radius
+    return [area, perimeter]
+}
+
+console.log(calculateAreaAndPerimeter(50));
+
+
+function calculateHighestAndLowest(arr){
+    let max = highestNum(arr)
+    let min = lowestNum(arr)
+    return [max, min]
+}
+
+console.log(calculateHighestAndLowest(numArr)[0])
+console.log(calculateHighestAndLowest(numArr)[1])
+console.log(calculateHighestAndLowest(numArr))
+
+
+
+// 5 8
+
+// [21, 5, 8, 87, 4 ] true
+// [21, 5, 9, 8, 87, 4 ] false
+// [21, 5, 9, 87, 4 ] false
+
+function isFiveFollowedByEight(arr){
+    for(let i=0; i<arr.length-1; i++){
+        if(arr[i] == 5 && arr[i+1] == 8){
+            return true
+        }
+    }
+    return false
+}
+
+
+let arr11 = [32, 65, 87, 44]
+arr11[0] = arr11[arr11.length-1]
+arr11[arr11.length-1] = arr11[0]
+// console.log(arr11);
+
+
+
+// [21, 5, 9, 87, 33 ]     
+let arr12 = [21, 5, 9, 87, 33 ];
+function swapFirstAndLast(arr){
+    let a = arr[0] // a = 21
+    arr[0] = arr[arr.length - 1] // arr[0] = 33
+    arr[arr.length - 1] = a // last num = 21
+    return arr;
+}
+
+// [33, 5, 9, 87, 21 ]     
+
+console.log(swapFirstAndLast(arr12));
+
+for(let i=0; i<100; i++){
+    console.log( parseInt( Math.random() * 10  ) );
+}
+
+// console.log( parseInt( Math.random() * 10  ) );
+// console.log( parseInt( Math.random() * 10  ) );
+// console.log( parseInt( Math.random() * 10  ) );
+
+let values = [32, 76, 787, 43]
+console.log(values[parseInt( Math.random() * 4)]);
