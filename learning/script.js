@@ -339,5 +339,46 @@ for(let i=0; i<100; i++){
 // console.log( parseInt( Math.random() * 10  ) );
 // console.log( parseInt( Math.random() * 10  ) );
 
-let values = [32, 76, 787, 43]
-console.log(values[parseInt( Math.random() * 4)]);
+let values = [32, 76, 787, 43, 55]
+console.log(values[parseInt( Math.random() * values.length)]);
+
+function randomVal(arr){
+    return arr[parseInt(Math.random() * arr.length)]
+}
+
+// ["","","","",""]
+
+let arr13 = ["Lith", "Polska", "Gurom"]
+
+console.log(randomVal(arr13))
+
+// "2","3","4","5","6","7","8","9","10","J","Q","K","A"
+// "Spades","Clubs","Diamonds","Hearts"
+
+
+// randomCards(3)
+// "5 of spades
+//  K of hearts
+//  2 of Diamonds"
+
+function randomCard(){
+    const numbers =  ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
+    const suits = ["Spades","Clubs","Diamonds","Hearts"]
+    let firstRandomNum = parseInt(Math.random() * numbers.length)
+    let secondRandomNum = parseInt(Math.random() * suits.length)
+
+    return `${numbers[firstRandomNum]} of ${suits[secondRandomNum]}`
+}
+
+console.log(randomCard())
+
+function randomCards(numberOfCards){
+    
+    let cards = ""
+    for (let i = 0; i < numberOfCards; i++){
+        cards += randomCard()+"\n"
+    }
+    return cards
+}
+
+console.log(randomCards(3))
