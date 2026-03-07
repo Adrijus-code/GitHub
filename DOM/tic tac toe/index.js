@@ -35,7 +35,7 @@ function something(e){
 
 
 
-
+ ss
 
 
 function checkGameOver(){
