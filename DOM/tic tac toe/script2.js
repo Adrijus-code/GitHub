@@ -52,7 +52,7 @@ function check(a,b,c){
         is_game_over = true
     }
 }
-
+ss
 
 
 [32, 65, 87, 12].forEach(num => {
