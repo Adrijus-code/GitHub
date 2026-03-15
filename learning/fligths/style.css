@@ -1,0 +1,17 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+thead tr{
+    background-color: aquamarine;
+}
+tr:nth-child(even){
+    background-color: #DDD;
+}
+
+
+td, th{
+    border: 1px solid black;
+    padding: 5px 20px;
+    text-align: center;
+}

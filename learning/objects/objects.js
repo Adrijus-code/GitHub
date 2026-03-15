@@ -37,6 +37,7 @@ const container = document.querySelector('#container')
 const min_age_input = document.querySelector("#min_age_input")
 const max_age_input = document.querySelector("#max_age_input")
 const filter_btn = document.querySelector("#filter_btn")
+const name = document.querySelector("#name")
 
 // container.innerText = "<p>Lorem ipsum dolor <br> sit amet consectetur adipisicing elit. Necessitatibus alias ex quibusdam illo expedita. Iusto vel, qui amet aspernatur facilis quam reprehenderit? Natus quas sunt veritatis rem in ex suscipit.</p>"
 //container.innerHTML = "<p>Lorem ipsum dolor <br> sit amet consectetur adipisicing elit. Necessitatibus alias ex quibusdam illo expedita. Iusto vel, qui amet aspernatur facilis quam reprehenderit? Natus quas sunt veritatis rem in ex suscipit.</p>"
@@ -45,11 +46,12 @@ const filter_btn = document.querySelector("#filter_btn")
 
 // filter_btn.addEventListener('click', ()=> displayPeople(min_age_input.value, max_age_input.value))
 filter_btn.addEventListener('click', displayPeople)
+console.log("Adrijus".includes("dr"));
 
 function displayPeople(){
     let containers = ""
     people.filter(person =>{
-        return person.age >= min_age_input.value && person.age <= max_age_input.value
+        return person.age >= min_age_input.value && person.age <= max_age_input.value && person.name.includes(name.value)
     }).forEach(person =>{
         containers += displayPerson(person)
     })
