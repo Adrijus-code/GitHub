@@ -1,0 +1,31 @@
+body{
+    display: flex;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+thead tr{
+    background-color: aquamarine;
+}
+tr:nth-child(even){
+    background-color: #DDD;
+}
+
+
+td, th{
+    border: 1px solid black;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    /* width: 400px;
+    height: 400px; */
+    background-color:#F5F5DC;
+    border: 2px dashed red;
+    padding: 20px;
+
+}

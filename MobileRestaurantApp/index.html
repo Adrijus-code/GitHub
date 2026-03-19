@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Smythe&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-text-div">
+                <h1 class="header-company-name">Jimmy's Dinner</h1>
+                <p class="header-company-slogan">The best burgers and pizzas in town</p>
+            </div>
+        </header>
+        <section class="container" id="item-container"></section>
+        <section class="container" id="item-purchase-container">
+            <h3 class="client-order">Your order</h3>
+
+            <div class="added-items-div"></div>
+            
+            <div class="order-completion-section">
+                <div class="total-price-div">
+                    <h4 class="order-total-price">Total price:</h4>
+                    <span class="order-total-amount">$26</span>
+                </div>
+                <button class="order-completion-btn">Complete order</button>
+            </div>
+        </section>
+        <script src="index.js" type="module"></script>
+    </body>
+    <section class="modal-popup">
+        <form id="card-details-form">
+            <div class="form-info-div">
+                <h2 class="form-details">Enter card details</h2>
+            </div>
+            <input class="input" type="text" required placeholder="Enter your name">
+            <input class="input" type="text" required placeholder="Enter card number">
+            <input class="input" type="text" required placeholder="Enter CVV">
+            <button class="modal-form-btn" disabled>Pay</button>
+        </form>
+    </section>
+</html>
+

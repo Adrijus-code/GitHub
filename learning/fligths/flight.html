@@ -1,13 +1,70 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
-        <script src="flight.js" defer></script>
+        <script src="flight.js" defer type="module"></script>
         <link rel="stylesheet" href="flight.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
     </head>
     <body>
-        
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight number</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Destination</th>
+                    <th>Pilot</th>
+                    <th>Co-Pilot</th>
+                </tr>
+            </thead>
+            <tbody>
+           
+              
+                
+            </tbody>
+        </table>
+        <div class="search-parameters-div">
+            <form action="">
+                <label for="City">City:</label>
+                <input type="text" id="City">
+                <label for="country">Country</label>
+                <input type="text" id="country">
+                <label for="region">Region</label>
+                <input type="text" id="region">
+                
+                <label for="day_of_week">day of week</label>
+                <select name="" id="day_of_week">
+                    <option value="any">any</option>
+                     <option value="Monday">Monday   </option>
+                    <option value="Tuesday">Tuesday   </option>
+                    <option value="Wednesday">Wednesday </option>
+                    <option value="Thursday">Thursday  </option>
+                    <option value="Friday">Friday    </option>
+                    <option value="Saturday">Saturday  </option>
+                    <option value="Sunday">Sunday    </option>
+                </select>
+                
+                <h4>Departure Time</h4>
+                
+                <label for="min">Min:</label>
+                <input type="text" id="min">
+
+                <label for="max">Max:</label>
+                <input type="text" id="max">
+
+                <h4>Required</h4>
+
+                <label for="pilot">Pilot:</label>
+                <input type="checkbox" id="pilot">
+
+                <label for="co-pilot">Co-pilot</label>
+                <input type="checkbox" id="co-pilot">
+                
+                <button id="apply-filters-btn">Apply Filters</button>
+                <button id="show-all-flights-btn">Show All Flights</button>
+            </form>
+        </div>
     </body>
 </html>
