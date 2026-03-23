@@ -129,6 +129,9 @@ header,section{
   font-size: 1rem;
   margin-bottom: 1.25em;
 }
+.hidden{
+  display: none;
+}
 .blog-img{
   width: 100%;
   height: 275px;
@@ -175,15 +178,18 @@ footer{
 @media (min-width:1024px){
   .introduction-container{
     width: 100%;
-    height: 700px;
+    height: 600px;
     margin-top: 3em;
+  }
+  .hero-section{
+    height: 700px;
+  }
+  .hero-section .container .hero-texts{
+    margin-top: 20em;
   }
   .hero-img{
     max-width: 175px;
     margin-bottom: 0;
-  }
-  .hero-texts{
-    margin-left: 1em;
   }
   .hero-heading, .hero-section-p{
     margin: 0;
@@ -195,8 +201,7 @@ footer{
     margin-top: 1em;
   }
   .hero-texts{
-    padding: 4em 4em 0 4em;
-    max-width: 1650px;
+    max-width: 1500px;
   }
   .explanation-divs{
     padding: 4em 4em 0 4em;
@@ -208,8 +213,12 @@ footer{
   }
   .blog-posts-div{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5em;
+  }
+  .hidden{
+    display: block;
   }
   .blog-post{
     flex: 1;
