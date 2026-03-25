@@ -135,22 +135,31 @@ console.log(
 
 
 // "KAYAK"
+// "racecar"
+// "noon"
 
-// function isPalindrome(str){
-//     if(){
+// isPalindrome("AYB")
 
-//     }
-    
-// }
-
-// "salah" ---> "h"
-function reverseString(str){
-    if(str.length === 0){
-        return ""
+function isPalindrome(str){
+    if(str.length < 2){
+        return true
     }
-    // return "hey"
-    return str.charAt(str.length - 1) + reverseString(str.substring(0, str.length - 1))
+    if(str.charAt(0) !== str.charAt(str.length - 1)){
+        return false
+    }else{
+        return isPalindrome(str.substring(1, str.length - 1))
+    }
 }
 
-console.log(reverseString("salah"));
-console.log(reverseString("adrijus"));
+// "salah" ---> ""
+// "h" + "a" + "l" + "a" + "s" 
+// function reverseString(str){
+//     if(str.length === 1){
+//         return str
+//     }
+
+//     return str.charAt(str.length - 1) + reverseString(str.substring(0, str.length - 1))
+// }
+
+// console.log(reverseString("salah"));
+// console.log(reverseString("adrijus"));

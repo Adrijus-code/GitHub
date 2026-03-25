@@ -1,0 +1,59 @@
+.container{
+    border: 1px solid gray;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    padding: 30px;
+}
+#add-img{
+    width: 35px;
+    height: 35px;
+    /* padding: 1rem;
+    background-color: green; */
+}
+#input-container{
+    display: flex;
+    border: 1px solid black;
+
+}
+#task-input{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.state-btn {
+    margin-top: .5em;
+    padding: 5px 0;
+    width: 30%;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+#btns_container{
+    display: flex;
+    justify-content: space-around;
+}
+.active{
+    background-color: gray;
+    color: white;
+}
+.task{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 0 .5em;
+    margin-top: 10px;
+}
+.task-title{
+    width: 100%;
+    text-align: left;
+    padding-left: .5em;
+    font-weight: 600;
+}
+.task-edit, .task-delete{
+    width: 25px;
+    margin-right: .5em;
+}
+.task-checkbox{
+    width: 25px;
+    height: 25px;
+}
