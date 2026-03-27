@@ -4,5 +4,7 @@
 *.jpg
 *.config.js
 *.md
+.env
 Twimba/vite.config.js
 New repo/new repo/
+config.js

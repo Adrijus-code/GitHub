@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="config.js" defer></script>
+        <script src="script.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-elements">
+                    <h1 id="project-title">Find your film</h1>
+                    <a id="html-link" target="_blank" href="watchlist.html">My Watchlist</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="input-div">
+                    <div id="search-div">
+                        <div id="search-icon-div">
+                            <img src="./images/search.png" id="search-icon">
+                        </div>
+                        <input type="text" id="search-input">
+                    </div>
+                    <button id="search-btn">Search</button>
+                </div>
+                <div id="movie-display-div">
+                    <div class="movie">
+                        <div class="movie-poster-div">
+                            <img src="./images/movie.png" class="movie-poster">
+                        </div>
+                        <div class="movie-info-div">
+                            <div class="movie-title-rating-div">
+                                <h2 class="movie-title">Blade Runner</h2>
+                                <div class="movie-rating-div">
+                                    <img src="./images/star.png" class="movie-rating-icon">
+                                    <p class="movie-rating">8.1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-length-genre-div">
+                            <p class="movie-length">117 min</p>
+                            <p class="movie-genre">Action, Drama, Sci-fi</p>
+                            <div class="add-to-watchlist-div">
+                                <div class="plus-icon-div">
+                                    <img src="./images/plus.png" class="plus-icon">
+                                </div>
+                                <button class="add-to-watchlist-btn">Watchlist</button>
+                            </div>
+                        </div>
+                        <p class="movie-plot-p">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
