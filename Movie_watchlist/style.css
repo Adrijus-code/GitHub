@@ -185,7 +185,7 @@ header{
 main{
     width: 100%;
     min-height: 100vh;
-    background-color: #000000dc;
+    background-color: #ffffffdc;
 }
 /* Search input */
 #input-div {
@@ -202,7 +202,7 @@ main{
 
     position: relative; 
     top: -22px; 
-    margin-bottom: -22px;
+    margin-bottom: .25em;
 }
 #search-div{
 	display: flex;
@@ -232,4 +232,81 @@ main{
 }
 #search-btn:hover{
 	background-color: rgba(131, 121, 121, 0.473);
+}
+
+/* Movies */
+#movie-display-div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.movie{
+	display: flex;
+	width: 90%;
+	height: 250px;
+	border-bottom: 1px solid gray;
+}
+.movie-info-div{
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2em 1.25em;
+	flex: 3;
+}
+.movie-title-rating-div{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.movie-title{
+	font-size: 1.5rem;
+	white-space: nowrap;
+}
+.movie-rating-div{
+	display: flex;
+	align-items: flex-end;
+}
+.movie-length-genre-div{
+	display: flex;
+	align-items: center;
+	margin: 1em 0;
+	gap: 1.5em;
+}
+.movie-length, .movie-genre{
+	white-space: nowrap;
+}
+.add-to-watchlist-div{
+	display: flex;
+	align-items: flex-end;
+}
+.add-to-watchlist-btn{
+	border: none;
+	margin-left: .3em;
+	cursor: pointer;
+}
+.movie-plot-p{
+	color: rgb(104, 103, 103);
+	align-self: self-start;
+	max-width: 50ch;
+}
+/* Movie Icons */
+
+.movie-poster-div{
+	flex: 1;
+	margin: auto 0;
+	object-fit: contain;
+}
+.movie-poster{
+	height: 80%;
+	width: 80%;
+}
+.movie-rating-icon-div{
+	margin: 0 .75em;
+	align-self: center;
+	width: 15px;
+}
+.plus-icon-div{
+	width: 20px;
+	cursor: pointer;
 }

@@ -3,12 +3,33 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <script src="config.js" defer></script>
-        <script src="script.js" defer></script>
+        <script src="watchlist.js" defer></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
     </head>
-    <body>
-        <h1>watchlist</h1>
+        <body>
+        <header>
+            <div class="container">
+                <div class="header-elements">
+                    <h1 id="project-title">My Watchlist</h1>
+                    <a id="html-link" target="_blank" href="findfilm.html">Find movie</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="input-div">
+                    <div id="search-div">
+                        <div id="search-icon-div">
+                            <img src="./images/search.png" id="search-icon">
+                        </div>
+                        <input type="text" id="search-input" placeholder="Search for a movie">
+                    </div>
+                    <button id="search-btn">Search</button>
+                </div>
+                <div id="watchlist-display-div"></div>
+            </div>
+        </main>
     </body>
 </html>
