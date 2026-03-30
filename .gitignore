@@ -5,6 +5,7 @@
 *.config.js
 *.md
 .env
+*.json
 Twimba/vite.config.js
 New repo/new repo/
 config.js

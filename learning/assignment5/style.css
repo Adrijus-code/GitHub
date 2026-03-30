@@ -1,0 +1,39 @@
+#page-title{
+    background-color: purple;
+    color: white;
+}
+.question-btn{
+    padding: .5em .5em;
+}
+#question-display-div{
+    border: 1px solid black;
+    padding: 1em;
+}
+.question-num{
+    background-color: aquamarine;
+}
+.answer-div{
+    display: flex;
+    flex-direction: column;
+}
+.submit-btn{
+    padding: .25em .75em;
+    background-color: brown;
+    color: white;
+    border: none;
+    margin-top: 1em;
+}
+.score-display-h3{
+    background-color: green;
+    color: white;
+    padding: .5em .5em;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+th,td{
+    border: 1px solid black;
+    padding: 1em;
+}

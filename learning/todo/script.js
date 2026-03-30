@@ -107,7 +107,7 @@ function remove_item(the_rmv_img){
     const ones_to_keep = tasks.filter(task =>{
         return task.task_name !== the_rmv_img.parentNode.querySelector(".task-title").innerText
     })
-
+    console.log(ones_to_keep)
     tasks = ones_to_keep
     
     displayTasks(tasks)
