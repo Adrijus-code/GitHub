@@ -1,0 +1,276 @@
+/* Css reset */
+*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		background-repeat: no-repeat;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	html {
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+        block-size: 100%;
+	}
+
+	img,
+	iframe,
+	audio,
+	video,
+	canvas {
+		display: block;
+		max-inline-size: 100%;
+		block-size: auto;
+	}
+
+	svg {
+		max-inline-size: 100%;
+	}
+
+	svg:not([fill]) {
+		fill: currentColor;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	fieldset,
+	iframe {
+		border: none;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p {
+		text-wrap: pretty;
+		font-variant-numeric: proportional-nums;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-variant-numeric: lining-nums;
+	}
+
+	p,
+    blockquote,
+    q,
+    figcaption,
+    li {
+        hanging-punctuation: first allow-end last;
+    }
+
+	input,
+	label,
+	button,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+        line-height: 1.1;
+    }
+
+	math,
+	time,
+	table {
+		font-variant-numeric: tabular-nums lining-nums slashed-zero;
+	}
+
+	code {
+		font-variant-numeric: slashed-zero;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	abbr {
+		font-variant-caps: all-small-caps;
+		text-decoration: none;
+
+		&[title] {
+			cursor: help;
+			text-decoration: underline dotted;
+		}
+	}
+
+	sup,
+	sub {
+		line-height: 0;
+	}
+
+	:disabled {
+		opacity: 0.8;
+		cursor: not-allowed;
+	}
+
+	:focus-visible {
+		outline-offset: 0.2rem;
+	}
+
+/* Body */
+body{
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    border: 1px solid gray;
+    max-width: 450px;
+    height: fit-content;
+}
+.container{
+    padding: 1em;
+}
+/* Header */
+header{
+    height: 250px;
+    width: 100%;
+    background-color: aqua;
+    background-image: url("./images/worldmap.png");
+    background-size: cover;
+    background-position: left 35% top 10%;
+    background-repeat: no-repeat;
+    align-content: center;
+    text-align: center;
+}
+/* Top div parrot logo */
+#top-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#parrot-logo-div{
+    width: 25%;
+}
+#parrot-logo{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#top-div-text{
+    text-align: left;
+    margin-left: .75em;
+}
+/* Top div text */
+#app-title-h1{
+    color: rgba(50, 205, 50, 1);
+    font-size: 2.8rem;
+    letter-spacing: -2px;
+}
+#app-slogan-p{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    margin-top: .3em;
+}
+/* Form */
+#text-translation-form{
+    border: 5px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1.5em 1em;
+}
+/* Form user input div */
+#user-input-h2, #user-select-language-h2{
+    color: rgba(3, 90, 157, 1);
+}
+#user-input-textarea{
+    width: 100%;
+    height: 125px;
+    background-color: rgba(239, 240, 244, 1);
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: .75em .5em;
+    font-size: 1.5rem;
+}
+#user-input-textarea::placeholder{
+    color: black;
+    font-size: 1.25rem;
+}
+/* Form user-select-language-div */
+#user-select-language-h2{
+    margin-bottom: 1.25em;
+}
+#radio-input-divs{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 25px;
+}
+.radio-inp{
+    transform: scale(1.25);
+}
+.radio-input{
+    display: flex;
+    align-items: center;
+}
+.radio-label{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 .5em;
+}
+.flag{
+    align-self: flex-end;
+    display: block;
+    width: 28px;
+    border: 1px solid gray;
+}
+#form-submit-btn, #start-over-btn{
+    width: 100%;
+    height: 55px;
+    border: none;
+    background-color: rgba(3, 90, 157, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    margin: 2em 0 .75em 0;
+    cursor: pointer;
+}
+
+/* Translated text */
+#user-translated-p{
+    width: 100%;
+    height: 125px;
+    background-color: rgba(239, 240, 244, 1);
+    resize: none;
+    text-align: left;
+    border: none;
+    border-radius: 10px;
+    padding: .75em .5em;
+    font-size: 1.5rem;
+    overflow: auto;
+}
+
+/* Hidden */
+.hidden{
+    display: none;
+}

@@ -1,13 +1,56 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>aireq</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="srcipt.js" type="module" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="top-div">
+                    <div id="parrot-logo-div">
+                        <img src="./images/parrot.png" id="parrot-logo">
+                    </div>
+                    <div id="top-div-text">
+                        <h1 id="app-title-h1">PollyGlot</h1>
+                        <p id="app-slogan-p">Perfect Translation Every Time</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="text-translation-form">
+                    <div id="user-input-div">
+                        <h2 id="user-input-h2">Text to translate 👇</h2>
+                        <textarea name="translation" id="user-input-textarea" placeholder="Your input HERE!"></textarea>
+                    </div>
+                    <div id="user-select-language-div">
+                        <h2 id="user-select-language-h2">Select language 👇</h2>
+                        <div id="radio-input-divs">
+                            <div class="radio-input">
+                                <input type="radio" name="selected_lang" id="french-radio" value="french" class="radio-inp">
+                                <label for="french-radio" class="radio-label">French</label>
+                                <span><img src="./images/french.png" class="flag"></span>
+                            </div>
+                            <div class="radio-input">
+                                <input type="radio" name="selected_lang" id="spanish-radio" value="spanish" class="radio-inp">
+                                <label for="spanish-radio" class="radio-label">Spanish</label>
+                                <span><img src="./images/spanish.png" class="flag"></span>
+                            </div>
+                            <div class="radio-input">
+                                <input type="radio" name="selected_lang" id="japanese-radio" value="japanese" class="radio-inp">
+                                <label for="japanese-radio" class="radio-label">Japanese</label>
+                                <span><img src="./images/japanese.png" class="flag"></span>
+                            </div>
+                        </div>
+                        <button id="form-submit-btn">Translate</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
