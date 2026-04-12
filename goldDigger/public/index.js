@@ -89,4 +89,4 @@ function closeModal(e){
     }
 }
 
-//setInterval(updateGoldPrice, 5000)
+setInterval(updateGoldPrice, 5000)

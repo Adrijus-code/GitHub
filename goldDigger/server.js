@@ -1,4 +1,6 @@
 import http from 'node:http'
+import path from 'node:path'
+import fs from 'node:fs/promises'
 import { serveStatic } from './utils/serveStatic.js'
 import { sendResponse } from './utils/sendResponse.js'
 
@@ -23,11 +25,28 @@ const server = http.createServer(async(req, res) =>{
             let body = ``;
             req.on('data', chunk => { body += chunk.toString(); });
 
-            return req.on('end', () => {
-                const parsedData = JSON.parse(body);
-                console.log(parsedData)
-                res.writeHead(200, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ message: "Data saved successfully!" }));
+            return req.on('end', async () => {
+                try{
+                    const parsedData = JSON.parse(body);
+                    const pathToFile = path.join(__dirname, 'data', 'data.txt')
+                    const {date, amountPaid, pricePerOz, boughtOz} = parsedData
+                    const stringToAppend = `${date}, amount paid: ${amountPaid}, price per Oz: ${pricePerOz}, gold sold: ${boughtOz} Oz,\n`
+                    
+                    await fs.appendFile(
+                        pathToFile,
+                        stringToAppend,
+                        'utf8'
+                    )
+
+                    return sendResponse(res, 200, 'application/json', JSON.stringify({ message: "Data saved successfully!" }))
+                
+                }catch(err){
+
+                    console.error("Error with saving data", err)
+                    return sendResponse(res, 500, 'application/json', JSON.stringify({ message: "Internal Server Error" }))
+                
+                }
+
             });
         }
 
