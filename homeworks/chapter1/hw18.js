@@ -13,7 +13,7 @@ let color1 = "brown";
 let length1 = 3;
 let width1 = 2;
 let price1 = 50;
-
+Math.random()
 let toy2 = "buzz";
 let color2 = "green";
 let length2 = 4;
