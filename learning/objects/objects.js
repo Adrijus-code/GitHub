@@ -31,6 +31,40 @@ const people = [
   { name: "Tina", age: 25, image: "https://randomuser.me/api/portraits/women/20.jpg", alive: true },
 ];
 
+console.log(`${people[0].name} is ${people[0].age} and she ${people[0].alive === true ? "alive":"dead"}`)
+
+function display(person){
+    return `${person.name} is ${person.age} and she ${person.alive === true ? "alive":"dead"}`
+}
+
+console.log(display(people[0]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log(people);
 
 const container = document.querySelector('#container')
