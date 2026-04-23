@@ -1,3 +1,11 @@
+const search_input = document.querySelector('.search-input')
+const min_age_input = document.querySelector('.min-age-input')
+const max_age_input = document.querySelector('.max-age-input')
+const isAlive = document.querySelector('#isAlive')
+
+search_input.addEventListener('input',search)
+isAlive.addEventListener('input',search)
+
 const people = [
     { 
         name: "Alice", 
@@ -34,8 +42,14 @@ const people = [
 console.log(`${people[0].name} is ${people[0].age} and she ${people[0].alive === true ? "alive":"dead"}`)
 
 function display(person){
-    const {name,age=1,alive} = person
-    return `${name} is ${age} and she ${alive === true ? "alive":"dead"}`
+    const {name,age=1,image, alive} = person
+    return `
+        <div>
+            <h1>${name}</h1>
+            <img src=${image} alt="">
+            <p>${age}</p>
+            <p>${alive === true ? "is alive": "dead"}</p>
+        </div>`
 }
 
 console.log(display(people[0]))
@@ -87,16 +101,24 @@ function displayInTheDom(arr){
     });
     document.body.innerHTML += str
 }
-displayInTheDom(people)
-console.log("--------------------------------------------- all people");
 
-displayPeople(people)
-console.log("--------------------------------------------- old people");
-displayPeople(oldPeople)
+function search(){    
+    let str = ''
+    const search_input_value = search_input.value
+    const min_age_input_value = min_age_input.value || 0
+    const max_age_input_value = max_age_input.value || 130
 
-console.log(evenAges)
-console.log(namesWithFive);
-console.log(firstThreeLetters);
+    people.filter(person=>{
+        return person.name.toLowerCase().includes(search_input_value.toLowerCase()) 
+        && person.age > Number(min_age_input_value) 
+        && person.age < Number(max_age_input_value)
+        && person.alive === isAlive.checked
+    }).forEach(person=>{
+        str += display(person)
+    })
+    
+    document.querySelector('.container').innerHTML = str
+}
 
 
 // console.log(people)
