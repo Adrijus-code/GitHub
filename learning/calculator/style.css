@@ -1,0 +1,44 @@
+
+body{
+    margin: 0 auto;
+}
+#container{
+    width: 340px;
+    height: 530px;
+    background-color: #212121;
+    color: white;
+    font-family: 'Arial';
+}
+#display{
+    height: 230px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding:0 .5em .5em 0
+}
+#container-buttons{
+    background-color: #212121;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button{
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    background-color: #323232;
+    font-size: 1.25rem;
+}
+.number{
+    background-color: #3B3B3B;
+}
+.equals{
+    background-color: #28F5FF ;
+    color: black;
+}
+/* 0 - 9  #3B3B3B */
+/* ====  #28F5FF */
