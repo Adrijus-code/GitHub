@@ -1,6 +1,9 @@
 
 body{
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 #container{
     width: 340px;
@@ -32,6 +35,13 @@ body{
     margin: 2px;
     background-color: #323232;
     font-size: 1.25rem;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #525252;
+}
+.equals:hover{
+    background-color: #68f7ff
 }
 .number{
     background-color: #3B3B3B;

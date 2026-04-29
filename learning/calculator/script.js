@@ -41,7 +41,6 @@ function buttonClicked(e){
         }
         else if( operator == "-"){
             display.innerHTML = value1 - value2
-        
         }
         else if( operator == "X"){
             display.innerHTML = value1 * value2
