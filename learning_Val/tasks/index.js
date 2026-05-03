@@ -1,8 +1,8 @@
 // // Task 1: Basic Reference Check
-// const obj1 = {name: "Alive"};
-// const obj2 = obj1;
+const obj1 = {name: "Alive"};
+const obj2 = obj1;
 
-// obj2.name = "Bob";
+obj2.name = "Bob";
 
 // console.log(obj1.name)
 // //It logs out Bob, because when you copy an object it only copies the reference to the value in memory, not the actual content
