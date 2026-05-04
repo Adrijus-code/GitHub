@@ -1,15 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
     outline: none;
 }
 body{
-    background-color: #15161D;
 }
 header{
+    color: white;
+    background-color: #15161D;
     padding: 0 150px;
 }
 .container{
@@ -54,4 +54,204 @@ input{
 #header-bottom-input-div button{
     padding: 0 2em;
     background-color: #D10024;
+}
+#header-bottom-cart-div{
+    display: flex;
+    align-items: center;
+    border: 2px solid green;
+    text-align: center;
+    gap: 20px;
+    
+}
+
+#header-bottom-cart-div div{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#header-bottom-cart-div div > img{
+    width: 20px;
+    display: block;
+}
+.span-num {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+nav ul {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    color: black;
+}
+#nav1  {
+    border-bottom: 1px solid gray;
+    padding: 1.5em 2em;
+    
+}
+.active{
+    color: rgb(255, 86, 86);
+    border-bottom: 1px solid rgb(255, 86, 86);
+}
+#product-collection-div{
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+    margin-top: 3em;
+}
+.product-collection{
+    background-color: #E4E7ED;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+.product-collection img{
+    scale: 1.0;
+    transition: .3s all;
+}
+
+.product-collection img:hover{
+    scale: 1.1;
+}
+
+
+
+.red_layer{
+    clip-path: polygon( 0 0, 100% 0, 50% 100% , 0 100% );
+    position: absolute;
+    width: 50%;
+    background-color: rgba(255, 0, 0, 0.829);
+    height: 100%;
+    top: 0;
+    padding: 20px;
+}
+.red_layer p img{
+    width: 20px;
+}
+#new-products-div{
+    
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid orange; */
+    margin-top: 10em;
+}
+#new-products-div li{
+    padding-bottom: 3px;
+}
+#new-products-div li:hover{
+    border-bottom: 5px solid red;
+    padding-bottom: 3px;
+    
+}
+.product-btns img{
+    width: 30px;
+}
+#container-products{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 3em;
+    
+}
+.product{
+    text-align: center;
+    border: 1px solid gray;
+    transition: .2s all;
+    position: relative;
+    
+}
+.product:hover{
+    border: 3px solid red;
+}
+
+.product-body *{
+    margin-top: 15px;
+    font-size: 2rem;
+}
+.tags{
+    width: fit-content;
+    display: flex;
+    margin: 10px 10px 10px auto;
+    
+}
+.tag:nth-child(1){
+    /* position: absolute;
+    top: 25px;
+    right: 50px; */
+    padding: .5em 1em;
+    border: 2px solid red;
+    margin-right: .5em;
+    color: red;
+}
+.tag:nth-child(2){
+    /* position: absolute;
+    top: 25px;
+    right: 50px; */
+    background-color: red;
+    padding: .5em 1em;
+    color: white;
+}
+#hot-deal-div{
+    /* background-color: #E4E7ED; */
+    margin-top: 5em;
+    background: url("./icons/hot1.png") no-repeat left,  url("./icons/product01.png") no-repeat right, #E4E7ED;
+    padding: 200px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#clock{
+    display: flex;
+    gap: 1em;
+    
+}
+#clock div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#clock span:nth-child(1){
+    font-size: 2rem;
+    font-weight: bold;
+}
+#clock span:nth-child(2){
+    font-size: 0.8rem;
+}
+#hot-deal-div h2,  #hot-deal-div h3{
+    margin-top: 1em;
+}
+#hot-deal-div button{
+    background-color: red;
+    padding: .8em 2em;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2em;
+    border-radius: 25px;
+}
+footer{
+    background-color: #15161D ;
+    color: white;
+    padding: 100px 0;
+}
+#footer-div{
+    display: flex;
+    justify-content: space-evenly;
 }
