@@ -249,9 +249,91 @@ nav ul {
 footer{
     background-color: #15161D ;
     color: white;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
+    border-top: 4px solid red;
 }
 #footer-div{
     display: flex;
     justify-content: space-evenly;
+    width: 75%;
+    gap: 3em;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+#footer-div span{
+    display: flex;
+    font-size: 1.25rem;
+    align-items: center;
+    margin-bottom: 1em;
+    text-wrap: nowrap;
+    color: rgb(165, 165, 165);
+    gap: 1em;
+    font-weight: bold;
+    transition: .2s all;
+}
+#letter-spaced:hover {  
+    color: rgb(165, 165, 165) !important;
+    cursor: auto; 
+}
+#footer-div span:hover{
+    color: red;
+    cursor: pointer;
+}
+#footer-div div{
+    width: 250px;
+    font-size: 2rem;
+    white-space: none;
+    text-wrap: wrap;
+}
+#footer-div div h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
+}
+#footer-div div p{
+    font-size: 1.25rem;
+    margin-bottom: 1.25em;
+    color: rgb(165, 165, 165);
+    transition: .2s all;
+    cursor: pointer;
+}
+#footer-div div p:hover{
+    color: red;
+}
+#footer-div img{
+    width: 20px;
+}
+#letter-spaced{
+    letter-spacing: 2px;
+    margin-left: auto;
+}
+#footer-bottom{
+    background-color: #1E1F29;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    color: rgb(165, 165, 165);
+}
+#card-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#card-div img{
+    border-radius: 20px;
+}
+#card-div img:nth-child(3){
+    width: 90px;
+}
+#card-div img:nth-child(4){
+    width: 75px;
+    margin-right: .5em;
+}
+#card-div img:nth-child(1){
+    margin-right: .5em;
+}
+#card-div img:nth-child(5){
+    margin-right: .6em;
 }
