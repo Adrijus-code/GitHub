@@ -1,14 +1,35 @@
+import clsx from 'clsx'
 
+export default function QuestionComp(props){
 
-export default function QuestionComp(){
+    const answers = props.answers
+    console.log(props.wholeQuestion.selectedAnswer)
+
+    const answerBtns = answers.map((answer, index)=>{
+        let id = ''
+        if(!props.isCheckingAnswers){
+            id = props.wholeQuestion.selectedAnswer === answer ? 'selected' : ''
+        }else{
+            if(answer === props.wholeQuestion.correct_answer){
+                id = 'btn-correct'
+            }else if(answer === props.wholeQuestion.selectedAnswer){
+                id = 'btn-incorrect'
+            }else{
+                id = 'btn-dimmed'
+            }
+        }
+            return <button 
+            onClick={()=>props.registerAnswer(props.questionIndex, answer)} 
+            key={index} 
+            className={clsx("question-btn",id)}>{answer}
+        </button>
+    })
+    
     return(
         <div className="question-div">
-            <h2 className="question-h2">How would one say goodbye in Spanish?</h2>
+            <h2 className="question-h2">{props.question}</h2>
             <div className="question-btn-div">
-                <button className="question-btn">Adios</button>
-                <button className="question-btn">See</button>
-                <button className="question-btn">Das</button>
-                <button className="question-btn">Wos</button>
+                {answerBtns}
             </div>
         </div>
     )

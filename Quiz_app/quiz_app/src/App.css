@@ -142,11 +142,12 @@
 /* Body */
 
 body{
-  background-color: aqua;
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Karla', sans-serif;
+  
 }
 
 /* First section elements */
@@ -159,9 +160,10 @@ body{
   justify-content: center;
   background-color: #F5F7FB;
   width: 550px;
-  height: 550px;
+  min-height: 550px;
   position: relative;
   padding: 2em 3em 0 3em;
+
 }
 .first-screen-section::before{
   content: "";
@@ -210,13 +212,14 @@ body{
 /* Second section */
 
 .second-screen-section{
-  overflow: hidden;
   display: flex;
-  justify-content: start;
+  align-items: start;
+  text-align: start;
   flex-direction: column;
   background-color: #F5F7FB;
   width: 550px;
-  height: 550px;
+  max-width: 90vw;
+  min-height: 550px;
   position: relative;
   padding: 2em 3em 0 3em;
 }
@@ -253,24 +256,93 @@ body{
 	display: flex;
 	flex-direction: column;
 	gap: .5em;
+	overflow-wrap: break-word;
+	width: 100%;
 }
 .question-h2{
 	font-size: 1.25rem;
+	display: block;
+	width: 100%;
+	white-space: normal;
+	overflow-wrap: break-word;
+	text-align: left;
 }
 .question-btn-div{
 	margin-bottom: 1em;
 	display: flex;
-	gap: 1em;
-	text-wrap: nowrap;
+	gap: .5em;
+	width: 100%;
+	flex-wrap: nowrap;
+	overflow: hidden;
 }
 .question-btn{
-	font-size: 14px;
-	padding: .25em 1.5em;
+	font-size: 12px;
+	padding: 5px;
+	height: auto;
 	border: 1px solid #4D5B9E;
 	border-radius: 8px;
 	cursor: pointer;
 	color: #293264;
+	width: auto;
+	min-width: 0;
+	flex: 1;
+	text-align: center;
 }
 .question-btn:hover{
-	background-color: #9da6d8;
+	background-color: #D6DBF5;
 } 
+/* selected button */
+.selected{
+	border: none;
+	background-color: #D6DBF5;
+}
+/* Check answers btn */
+.check-answers-btn{
+	padding: 1em 2em;
+	border-radius: 10px;
+	background-color: #4D5B9E;
+	color: white;
+	border: none;
+	font-size: .8rem;
+	margin-top: 1em;
+	cursor: pointer;
+	margin-bottom: 1em;
+	align-self: center;
+}
+/* Play again div */
+.play-again-div{
+	width: 100%;
+	display: flex;
+	z-index: 2;
+	margin-bottom: .5em;
+	justify-content: end;
+	align-items: center;
+}
+.play-again-btn{
+	text-wrap: nowrap;
+	margin-left: 1.5em;
+	padding: .65em 1.5em;
+	background-color: #4D5B9E;
+	border-radius: 10px;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+.score-p{
+	font-weight: bold;
+}
+/* Answer button colors */
+.btn-correct {
+    background-color: #94D7A2 !important;
+    border: none !important;
+}
+
+.btn-incorrect {
+    background-color: #F8BCBC !important;
+    border: none !important;
+    opacity: 0.5;
+}
+
+.btn-dimmed {
+    opacity: 0.5;
+}
