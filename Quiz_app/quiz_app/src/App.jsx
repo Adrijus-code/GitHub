@@ -94,7 +94,7 @@ function App() {
       let score = 0
 
       questions.forEach(q=>{
-        if(he.decode(q.correct_answer) === q.selectedAnswer){
+        if(he.decode(q.correct_answer) === he.decode(q.selectedAnswer)){
           score++
         }
       })

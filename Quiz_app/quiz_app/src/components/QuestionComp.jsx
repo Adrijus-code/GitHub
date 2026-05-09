@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-
+import he from 'he'
 export default function QuestionComp(props){
 
     const answers = props.answers
@@ -10,7 +10,7 @@ export default function QuestionComp(props){
         if(!props.isCheckingAnswers){
             id = props.wholeQuestion.selectedAnswer === answer ? 'selected' : ''
         }else{
-            if(answer === props.wholeQuestion.correct_answer){
+            if(answer === he.decode(props.wholeQuestion.correct_answer)){
                 id = 'btn-correct'
             }else if(answer === props.wholeQuestion.selectedAnswer){
                 id = 'btn-incorrect'
