@@ -16,5 +16,6 @@ console.log(arr);
 
 //how to add in any place
 //arr.splice(@index of which to insert to, 0(0=dont delete)-1(1=delete this many items) to delete or just shift to the right, value to insert)
+
 // how to find value (2 ways)
 //arr.find(), arr.indexOf(value)

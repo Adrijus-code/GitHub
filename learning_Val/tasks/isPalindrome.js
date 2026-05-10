@@ -9,7 +9,7 @@ function isPalindrome(string){
     let cleanStr = string.toLowerCase().replaceAll(' ','')
     
     for(let i = cleanStr.length - 1; i >= 0; i--){
-        result += cleanStr[i].toLowerCase()
+        result += cleanStr[i]
     }
 
     console.log(result)
