@@ -6,17 +6,19 @@
     $stmt = $pdo->query($sql);
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+ 
     // print("<pre>");
     // print_r($products);
     // print("</pre>");
 
     function displayProduct($pro){
+        $stars = join("", array_fill(0, $pro['product_rating'], "⭐"));
         return "
         <div class='product'>
             <h2>{$pro['product_name']}</h2>
             <img src='./images/{$pro['product_image']}'/>
             <p>{$pro['product_price']}</p>
-            <p>{$pro['product_rating']}</p>
+            <p>{$stars}</p>
         </div>";
     }
 
@@ -54,12 +56,12 @@
     </head>
     <body>
         <?php
-            print('<pre>');
-            print_r($_SESSION['user_logged']);
-            print('</pre>');
+            // print('<pre>');
+            // print_r($_SESSION['user_logged']);
+            // print('</pre>');
         ?>
         <?php
-            print($_SESSION['user_logged']['first_name']);
+            print('Welcome '.$_SESSION['user_logged']['first_name']);
             print(calculateAvg($products));
         ?>
         <div id="container">
