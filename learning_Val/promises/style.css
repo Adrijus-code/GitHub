@@ -1,0 +1,10 @@
+.user-info{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: .5em;
+}
+.user-title{
+    font-weight: normal;
+    color: red;
+    margin-left: 2em;
+}
