@@ -15,17 +15,18 @@
         $stars = join("", array_fill(0, $pro['product_rating'], "⭐"));
         return "
         <div class='product'>
-            <h2>{$pro['product_name']}</h2>
-            <img src='./images/{$pro['product_image']}'/>
-            <p>{$pro['product_price']}</p>
+            <h2>{$pro['ProductName']}</h2>
+            <img src='./images/{$pro['product_img']}'/>
+            <p>{$pro['RetailPrice']}</p>
             <p>{$stars}</p>
+            <button>Add to cart</button>
         </div>";
     }
 
     function calculateAvg($arr){
         $total = 0;
         foreach($arr as $pro){
-            $total += $pro['product_price'];
+            $total += $pro['RetailPrice'];
         }
         return $total/sizeof($arr);
     }

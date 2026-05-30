@@ -1,0 +1,69 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    padding:.5em 1em
+}
+#header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+#header-cart-container > img{
+    width: 25px;
+}
+table{
+    
+    /* border: 1px solid red; */
+    width: 100%;
+}
+td, th{
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+th{
+    padding-bottom: 15px;
+}
+main > h2{
+    text-align: center;
+}
+tr input{
+    width: 70px;
+}
+.product-img{
+    width: 50px;
+    
+}
+.product-img-div{
+    display: flex;
+    align-items: center;
+}
+.delete-img{
+    width: 25px;
+}
+.total-div{
+    display: flex;
+    justify-content: flex-end;
+}
+.cart-btn-div{
+    display: flex;
+    justify-content: flex-end;
+}
+#header-cart-container{
+    display: flex;
+    align-items: center;
+    
+}
+#header-cart-container > span{
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    /* padding: 10px; */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
