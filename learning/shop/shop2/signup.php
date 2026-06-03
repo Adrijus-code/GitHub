@@ -13,13 +13,14 @@
         $password = $_POST['password'];
         $password_confirm = $_POST['password_confirm'];
 
-        if($password != $password_confirm){
+        if($password != $password_confirm || $password==""){
             return;
         }
 
         $sql = "INSERT INTO users (first_name, last_name, email, password) values (?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$f_name, $l_name, $email, $password]);
+        $hash_pw = password_hash($password, PASSWORD_DEFAULT); 
+        $stmt->execute([$f_name, $l_name, $email, $hash_pw]);
         header("Location: signin.php");
     }
 

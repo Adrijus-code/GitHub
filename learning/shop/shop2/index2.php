@@ -28,7 +28,7 @@
         foreach($arr as $pro){
             $total += $pro['RetailPrice'];
         }
-        return $total/sizeof($arr);
+        return $total;
     }
 
 ?>
@@ -40,29 +40,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
+            *{
+                margin:0;
+                padding:0;
+            }
             #container{
                 display:flex;
+                flex-wrap:wrap;
+                align-items:center;
+                justify-content:center;
+                gap:20px
             }
             .product{
                 border: 1px solid black;
                 display:flex;
                 flex-direction:column;
                 align-items:center;
+                text-align:center;
 
+            }
+            .product h2 {
+                max-width:20ch;
+                font-size:20px;
             }
             .product > img{
                 width: 200px;
             }
+
+            header img{
+                width: 30px;
+            }
+            header {
+                display:flex;
+                justify-content:flex-end
+            }
         </style>
     </head>
     <body>
+        <header>
+            <a href="orders.php"><span>Orders</span></a>
+            <a href="cart.php">
+                <img src="./images/grocery-store.png" alt="">
+            </a>
+            <a href='logout.php'>
+                <img src='./images/logout.png' alt=''/>
+            </a>
+        </header>
         <?php
             // print('<pre>');
             // print_r($_SESSION['user_logged']);
             // print('</pre>');
         ?>
         <?php
-            print('Welcome '.$_SESSION['user_logged']['first_name']);
+            print('Welcome '.$_SESSION['user_logged']['id']."<br>");
             print(calculateAvg($products));
         ?>
         <div id="container">

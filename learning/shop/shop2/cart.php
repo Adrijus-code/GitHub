@@ -1,4 +1,12 @@
 <?php
+
+    // print(password_hash("salah123", PASSWORD_DEFAULT));
+    // print("<br>----");
+    // print(password_verify("salah123", '$2y$10$Uk0ADNbkQ2lpfJeehouv5.TO72Hv1GAzc/NTrhyoUqCUkpzHHGm0i'));
+    // print("<br>----");
+    // "salah123"  ---> D34T55
+    // "salah123"  ---> D34T55
+
     session_start();
     include_once("db.php");
     if(isset($_SESSION["user_logged"])){
@@ -60,11 +68,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel='stylesheet' href='cart.css'> 
+        <style>
+            header img{
+                width: 30px;
+            }
+        </style>
     </head>
     <body>
         <header>
             <div class="container">
                 <div id="header">
+                    <a href='logout.php'>
+                        <img src='./images/logout.png' alt=''/>
+                    </a>
                     <h1>Shopping Cart System</h1>
                     <div id="header-middle-div">
                         <p>Home</p>

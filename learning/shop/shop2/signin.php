@@ -6,15 +6,18 @@
 
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $sql = "SELECT * FROM users WHERE email = '$email'";
         $stmt = $pdo->query($sql);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         //print_r($user);
         if($user){
+            $hashed_pw = $user["password"];
+            if(!password_verify( $password , $hashed_pw)){
+                print("Credentials are wrong");
+                return;
+            }
             $_SESSION['user_logged'] = $user;
             header("Location: index2.php");
-        }else{
-            print("Credentials are wrong");
         }
     }
     
@@ -52,6 +55,8 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
             <button>Log in</button>
+            <p>You don't have an account ? <a href='signup.php'>Click here</a> to create one</p>
         </form>
+
     </body>
 </html>
