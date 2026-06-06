@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 import Die from "./Die"
+import React from 'react'
 import { nanoid } from "nanoid"
-import Confetti from "react-confetti"
+
 
 export default function App() {
     const [dice, setDice] = useState(() => generateAllNewDice())
@@ -57,7 +58,6 @@ export default function App() {
 
     return (
         <main>
-            {gameWon && <Confetti />}
             <div aria-live="polite" className="sr-only">
                 {gameWon && <p>Congratulations! You won! Press "New Game" to start again.</p>}
             </div>

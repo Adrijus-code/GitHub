@@ -156,7 +156,6 @@ export default function AssemblyEndgame() {
                 {letterElements}
             </section>
 
-            {/* Combined visually-hidden aria-live region for status updates */}
             <section
                 className="sr-only"
                 aria-live="polite"
