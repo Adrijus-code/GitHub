@@ -14,6 +14,7 @@ export default function User({
     const [name, setName] = useState(user.name)
     const [city, setCity] = useState(user.address.city)
     const [error, setError] = useState('Error')
+    const [isDeleting, setIsDeleting] = useState(false)
 
     function handleSave(){
         
@@ -65,11 +66,15 @@ export default function User({
       ) : (
         <>
           <span>{name} {city}</span>
-          <button onClick={() => setShow((b) => !b)} onMouseOver={getUserPosts}>
+          {!isDeleting ? 
+          <>
+            <button onClick={() => setShow((b) => !b)} onMouseOver={getUserPosts}>
             {show ? "Hide posts" : "Show posts"}
-          </button>
-          <button onClick={() => deleteUser(user.id)}>Delete</button>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+            </button>
+            <button onClick={() => setIsDeleting(true)}>Delete</button>
+            <button onClick={() => setIsEditing(true)}>Edit</button>
+          </>
+          : null}
         </>
       )}
       {show &&
@@ -80,6 +85,17 @@ export default function User({
             </li>
           );
         })}
+
+        {isDeleting ? (
+        <>
+          <div className="deletion-modal">
+            <p>Are you sure you want to delete <strong>{name}</strong>?</p>
+            <button onClick={() => deleteUser(user.id)}>Delete</button>
+            <button onClick={() => setIsDeleting(false)}>Cancel</button>
+          </div>
+        </>
+      )
+         : null}
     </ul>
   );
 }
